@@ -1,0 +1,6 @@
+markdown:    rdiscount
+server_port: 3000
+permalink:   pretty
+exclude:
+- nyerm-layout.ai
+- Rakefile
