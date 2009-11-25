@@ -9,7 +9,7 @@
   </head>
   <body>
     <div class="container_12">
-      <div id="header" class="grid_11 suffix_1">
+      <div id="header" class="grid_12">
         <h1>nyerm</h1>
         <p>Life goes by pretty fast</p>
         <ul>
@@ -17,17 +17,34 @@
           <li><a href="/about">About</a></li>
         </ul>
       </div>
-      <div id="main" class="prefix_1 grid_7">
-        {{ content }}
-      </div>
-      <div id="sidebar" class="grid_3 suffix_1">
-        <h2>Search</h2>
-        <h2>Subscribe</h2>
-        <h2>Flickr</h2>
-        <h2>Twitter</h2>
-        <h2>Delicious</h2>
-        <h2>Posts by category/tags</h2>
-        <h2>Archives</h2>
+      <div class="clear"></div>
+      {{ content }}
+      <div id="footer" class="grid_12">
+        <div id="search" class="alpha grid_4">
+          search form
+        </div>
+        <div id="archives_by_date" class="grid_4">
+          archives by date
+        </div>
+        <div id="archives_by_tag" class="grid_4 omega">
+          archives by tag
+        </div>
+        <div class="clear"></div>
+
+        <p>row of Flickr photos</p>
+
+        <div id="footer_left" class="alpha grid_4">
+          <ul>
+            <li>Projects</li>
+            <li>GitHub</li>
+          </ul>
+        </div>
+        <div id="footer_center" class="grid_4">
+          Latest from Twitter
+        </div>
+        <div id="footer_right" class="grid_4 omega">
+          Latest from Delicious
+        </div>
       </div>
     </div>
   </body>

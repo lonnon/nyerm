@@ -1,0 +1,36 @@
+---
+layout: default
+title: life goes by pretty fast
+---
+<div id="intro1" class="grid_8">
+  <p>
+    nyerm. The sound of something whizzing by. A car. Changing technology. Your latest deadline. Receding into the distance with a familiar doppler shift.
+  </p>
+</div>
+<div id="intro2" class="grid_4">
+  <p>
+    I'm Lonnon Foster, and this weblog is my attempt to grab snapshots of life's frantic race into the future. Here is where I write things down before they're lost, pushed aside by the next fast-moving object that grabs my attention.
+  </p>
+</div>
+<div class="clear"></div>
+
+{% assign first_post = site.posts.first %}
+<div id="post_details" class="grid_4">
+  <p>{{ first_post.date }}</p>
+  <p>{{ first_post.tags }}</p>
+</div>
+<div id="post_title" class="grid_8">
+  <h2><a href="{{ first_post.url }}">{{ first_post.title }}</a></h2>
+</div>
+<div id="post" class="prefix_4 grid_8">
+  {{ first_post.content }}
+  <h3>Other recent posts</h3>
+  <ul>
+    {% for post in site.posts limit:10 offset:2 %}
+      <li><span>{{ post.date }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+  
+  <h3><a href="/archive">Older posts &raquo;</a></h3>
+</div>
+<div class="clear"></div>
