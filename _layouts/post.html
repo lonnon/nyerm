@@ -2,8 +2,8 @@
 layout: default
 ---
 <div id="post_details" class="grid_4">
-  <p>{{ page.date | date_to_string }}</p>
-  <p>{{ page.tags | array_to_sentence_string }}</p>
+  <p class="date">{{ page.date | date_to_string }}</p>
+  <p class="tags">tags: {{ page.tags | array_to_sentence_string }}</p>
 </div>
 <div id="post_title" class="grid_8">
   <h2>{{ page.title }}</h2>

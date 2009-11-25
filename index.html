@@ -4,7 +4,7 @@ title: life goes by pretty fast
 ---
 <div id="intro1" class="grid_8">
   <p>
-    nyerm. The sound of something whizzing by. A car. Changing technology. Your latest deadline. Receding into the distance with a familiar doppler shift.
+    nyerm. The sound of something whizzing by. A car. Technological change. Your latest deadline. Receding into the distance with a familiar doppler shift.
   </p>
 </div>
 <div id="intro2" class="grid_4">
@@ -16,8 +16,8 @@ title: life goes by pretty fast
 
 {% assign first_post = site.posts.first %}
 <div id="post_details" class="grid_4">
-  <p>{{ first_post.date }}</p>
-  <p>{{ first_post.tags }}</p>
+  <p class="date">{{ first_post.date | date_to_string }}</p>
+  <p class="tags">tags: {{ first_post.tags | array_to_sentence_string }}</p>
 </div>
 <div id="post_title" class="grid_8">
   <h2><a href="{{ first_post.url }}">{{ first_post.title }}</a></h2>
