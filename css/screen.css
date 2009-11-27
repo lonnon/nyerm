@@ -2,6 +2,10 @@
 @import url('960.css');
 @import url('text.css');
 
+#post ul li span {
+  color: #bbb;
+}
+
 #intro1 p {
   font-size: 1.65em;
   line-height: 2;
@@ -10,17 +14,18 @@
 #post_details .date {
   text-align: right;
   font-size: 2em;
-  color: #ccc;
+  color: #bbb;
   margin-bottom: 0px;
 }
 
 #post_details .tags {
   text-align: right;
   font-size: 0.75em;
-  color: #ccc;
-  margin-top: 0px;
+  color: #bbb;
+  margin-bottom: 0px;
 }
 
 #post_title h2 {
   font-size: 2em;
+  margin-bottom: 0;
 }
