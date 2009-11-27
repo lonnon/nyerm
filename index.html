@@ -23,11 +23,12 @@ title: life goes by pretty fast
   <h2><a href="{{ first_post.url }}">{{ first_post.title }}</a></h2>
 </div>
 <div id="post" class="prefix_4 grid_8">
-  {{ first_post.content }}
+  {{ first_post.excerpt | markdownize }}
+  <p><a href="{{ first_post.url }}">Read more &raquo;</a></p>
   <h3>Other recent posts</h3>
   <ul>
-    {% for post in site.posts limit:10 offset:2 %}
-      <li><span>{{ post.date }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% for post in site.posts limit:10 offset:1 %}
+      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
   </ul>
   
