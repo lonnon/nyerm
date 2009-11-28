@@ -4,7 +4,7 @@ title: life goes by pretty fast
 ---
 <div id="intro1" class="grid_8">
   <p>
-    nyerm. The sound of something whizzing by. A car. Technological change. Your latest deadline. Receding into the distance with a familiar doppler shift.
+    <em>nyerm</em>. The sound of something whizzing by. A car. Technological change. Your latest deadline. Receding into the distance with a familiar doppler shift.
   </p>
 </div>
 <div id="intro2" class="grid_4">
@@ -24,11 +24,14 @@ title: life goes by pretty fast
 </div>
 <div id="post" class="prefix_4 grid_8">
   {{ first_post.excerpt }}
-  <p><a href="{{ first_post.url }}#more">Read more &raquo;</a></p>
+  <p class="read_more"><a href="{{ first_post.url }}#more">read more &raquo;</a></p>
   <h3>Other recent posts</h3>
   <ul>
     {% for post in site.posts limit:10 offset:1 %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+      <li>
+        <span class="date">{{ post.date | date_to_string }}</span>
+        <span class="link"><a href="{{ post.url }}">{{ post.title }}</a></span>
+      </li>
     {% endfor %}
   </ul>
 </div>

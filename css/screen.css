@@ -2,8 +2,50 @@
 @import url('960.css');
 @import url('text.css');
 
-#post ul li span {
-  color: #bbb;
+body {
+  background: url('../images/body.png') no-repeat top left;
+  color: #301105;
+}
+
+a:link,
+a:visited
+{
+  color: #d56c2c;
+  text-decoration: none;
+}
+
+a:hover
+{
+  color: #edbc2c;
+  text-decoration: none;
+}
+
+#container {
+  background: url('../images/header.png') no-repeat top right;
+}
+
+#header {
+  height: 92px;
+}
+
+#header h1,
+#header p {
+  opacity: 0;
+  height: 1px;
+}
+
+#header ul {
+  margin: 42px 0 0 320px;
+}
+
+#header ul li {
+  list-style: none;
+  margin: 0 20px 0 0;
+  font-size: 1.1em;
+  font-weight: bold;
+  font-style: italic;
+  float: left;
+  display: block;
 }
 
 #intro1 p {
@@ -11,23 +53,50 @@
   line-height: 2;
 }
 
+#intro2 p {
+  margin-top: 7px;
+}
+
 #post_details .date {
   text-align: right;
   font-size: 2em;
-  color: #bbb;
+  color: #ca7;
   margin-bottom: 0px;
 }
 
 #post_details .tags {
   text-align: right;
   font-size: 0.75em;
-  color: #bbb;
+  color: #ca7;
   margin-bottom: 0px;
 }
 
 #post_title h2 {
   font-size: 2em;
   margin-bottom: 0;
+}
+
+p.read_more {
+  font-style: italic;
+  font-weight: bold;
+}
+
+#post ul li {
+  list-style: none;
+  margin: 0;
+}
+
+#post ul li span.date {
+  color: #ca7;
+  display: block;
+  float: left;
+  text-align: right;
+  width: 95px;
+  margin-right: 10px;
+}
+
+#post ul li span.link {
+  font-weight: bold;
 }
 
 #license_image {
