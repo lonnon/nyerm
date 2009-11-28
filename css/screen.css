@@ -29,3 +29,12 @@
   font-size: 2em;
   margin-bottom: 0;
 }
+
+#license_image {
+  float: left;
+  margin-right: 10px;
+}
+
+#copyright {
+  font-size: 0.6em;
+}
