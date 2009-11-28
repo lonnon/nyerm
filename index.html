@@ -23,8 +23,8 @@ title: life goes by pretty fast
   <h2><a href="{{ first_post.url }}">{{ first_post.title }}</a></h2>
 </div>
 <div id="post" class="prefix_4 grid_8">
-  {{ first_post.excerpt | markdownize }}
-  <p><a href="{{ first_post.url }}">Read more &raquo;</a></p>
+  {{ first_post.excerpt }}
+  <p><a href="{{ first_post.url }}#more">Read more &raquo;</a></p>
   <h3>Other recent posts</h3>
   <ul>
     {% for post in site.posts limit:10 offset:1 %}
