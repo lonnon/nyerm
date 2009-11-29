@@ -26,7 +26,7 @@ title: life goes by pretty fast
   {{ first_post.excerpt }}
   <p class="read_more"><a href="{{ first_post.url }}#more">read more &raquo;</a></p>
   <h3>Other recent posts</h3>
-  <ul>
+  <ul id="recent_posts">
     {% for post in site.posts limit:10 offset:1 %}
       <li>
         <span class="date">{{ post.date | date_to_string }}</span>

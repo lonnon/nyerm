@@ -86,12 +86,12 @@ p.read_more {
   font-weight: bold;
 }
 
-#post ul li {
+ul#recent_posts li {
   list-style: none;
   margin: 0;
 }
 
-#post ul li span.date {
+ul#recent_posts li span.date {
   color: #ca7;
   display: block;
   float: left;
@@ -100,7 +100,7 @@ p.read_more {
   margin-right: 10px;
 }
 
-#post ul li span.link {
+ul#recent_posts li span.link {
   font-weight: bold;
 }
 
