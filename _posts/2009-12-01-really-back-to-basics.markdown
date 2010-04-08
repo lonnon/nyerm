@@ -1,5 +1,6 @@
 ---
 title: Really back to basics
+tags: [ruby, blogging]
 ---
 So, I have yet to finish the new Jekyll-based blog, and I'm already
 dissatisfied with Jekyll. My primary complaint is Liquid. I wasn't wild
