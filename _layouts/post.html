@@ -1,41 +1,82 @@
----
-layout: default
----
-<div id="post_details" class="grid_4">
-  <p class="date"><%= date %></p>
-  <p class="tags">tags: <%= tags.join ", " %></p>
-</div>
-<div id="post_title" class="grid_8">
-  <h2>{{ page.title }}</h2>
-</div>
-<div id="post" class="prefix_4 grid_8">
-  {{ content }}
-</div>
-<div class="clear"></div>
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title><%= title %> &laquo; nyerm</title>
+    <meta name="author" content="Lonnon Foster" />
+    <link rel="stylesheet" href="/css/screen.css" type="text/css" media="screen, projection" />
+  </head>
+  <body>
+    <div id="container" class="container_12">
+      <div id="header" class="grid_12">
+        <h1>nyerm</h1>
+        <p>Life goes by pretty fast</p>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about/">About</a></li>
+        </ul>
+      </div>
+      <div class="clear"></div>
 
-<script type="text/javascript">
-//<![CDATA[
-var disqus_developer = 0;
-//]]>
-</script>
-<div id="coments" class="prefix_4 grid_8">
-  <div id="disqus_thread"></div>
-  <script type="text/javascript" src="http://disqus.com/forums/nyerm/embed.js"></script>
-  <noscript><a href="http://disqus.com/forums/nyerm/?url=ref">View the discussion thread.</a></noscript>
-  <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
-</div>
+      <div id="post_details" class="grid_4">
+        <p class="date"><%= date %></p>
+        <p class="tags">tags: <%= tags.join ", " %></p>
+      </div>
+      <div id="post_title" class="grid_8">
+        <h2><%= title %></h2>
+      </div>
+      <div id="post" class="prefix_4 grid_8">
+        <%= content %>
+      </div>
+      <div class="clear"></div>
 
-<script type="text/javascript">
-//<![CDATA[
-(function() {
-	var links = document.getElementsByTagName('a');
-	var query = '?';
-	for(var i = 0; i < links.length; i++) {
-	if(links[i].href.indexOf('#disqus_thread') >= 0) {
-		query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
-	}
-	}
-	document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/nyerm/get_num_replies.js' + query + '"></' + 'script>');
-})();
-//]]>
-</script>
+      <script type="text/javascript">
+      //<![CDATA[
+      var disqus_developer = 0;
+      //]]>
+      </script>
+      <div id="coments" class="prefix_4 grid_8">
+        <div id="disqus_thread"></div>
+        <script type="text/javascript" src="http://disqus.com/forums/nyerm/embed.js"></script>
+        <noscript><a href="http://disqus.com/forums/nyerm/?url=ref">View the discussion thread.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+      </div>
+      
+      <script type="text/javascript">
+      //<![CDATA[
+      (function() {
+        var links = document.getElementsByTagName('a');
+        var query = '?';
+        for(var i = 0; i < links.length; i++) {
+        if(links[i].href.indexOf('#disqus_thread') >= 0) {
+          query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+        }
+        }
+        document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/nyerm/get_num_replies.js' + query + '"></' + 'script>');
+      })();
+      //]]>
+      </script>
+
+      <div id="footer" class="grid_12">
+        <div id="search" class="alpha grid_4">
+          search form
+        </div>
+        <div id="archives_by_date" class="grid_4">
+          archives by date
+        </div>
+        <div id="archives_by_tag" class="grid_4 omega">
+          archives by tag
+        </div>
+        <div class="clear"></div>
+
+        <p id="copyright">
+          <a id="license_image" rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/us/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/us/88x31.png" /></a>
+          Copyright &copy; 2003-<%= Time.now.year %> Lonnon Foster.
+          <br />
+          Except where otherwise noted, words and images on this site are licensed under a under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/us/">Creative Commons Attribution-Noncommercial 3.0 United States License</a>.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

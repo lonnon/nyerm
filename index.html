@@ -24,7 +24,7 @@ title: Home
   <h2><a href="<%= @site.posts.last.url %>"><%= @site.posts.last.title %></a></h2>
 </div>
 <div id="post" class="prefix_4 grid_8">
-  <p>Above-fold content goes here</p>
+  <%= @site.posts.last.above_fold %>
   <p class="read_more"><a href="<%= @site.posts.last.url %>#more">read more &raquo;</a></p>
   <h3>Other recent posts</h3>
   <ul id="recent_posts">
